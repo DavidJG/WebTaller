@@ -7,9 +7,11 @@
     --pallet-5: #a6a5b1; 
     --pallet-6: #bab7d4; 
     --pallet-7: #e8e8eb; 
-    --pallet-7-1: #ddddeb; 
+    --pallet-7-1: #5757f0; 
     --pallet-7-2: #e5e6eb; 
     --pallet-8: #e8e8eb; 
+
+    --link-1: #e8e8eb;
 
     --money-1:rgb(37, 175, 10);
 
@@ -109,7 +111,7 @@ main nav label:hover{
 
 main nav ul li:hover{
     background-color: var(--pallet-5);
-    color: var(--pallet-1);
+    color: var(--link-1);
     border-radius: 0.8rem;
 }
 
