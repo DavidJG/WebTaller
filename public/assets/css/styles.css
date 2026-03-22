@@ -1,0 +1,238 @@
+:root{ 
+
+    --pallet-1: #21203e; 
+    --pallet-2: #333160; 
+    --pallet-3: #636277; 
+    --pallet-4: #545364; 
+    --pallet-5: #a6a5b1; 
+    --pallet-6: #bab7d4; 
+    --pallet-7: #e8e8eb; 
+    --pallet-7-1: #ddddeb; 
+    --pallet-7-2: #e5e6eb; 
+    --pallet-8: #e8e8eb; 
+
+    --money-1:rgb(37, 175, 10);
+
+    --sombra:#5c5c5c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======= HEADER ======= */
+
+        /* ======= ↓ ↓ NAV ↓ ↓ ======= */
+header nav{
+    background-color: var(--pallet-2);
+    color: var(--pallet-7);
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: large;
+    font-weight: 900;
+}
+header nav ul li:hover{
+    text-decoration: underline;
+}
+
+        /* ======= ↓ ↓ TÍTULO ↓ ↓ ======= */
+header{
+    position: fixed;
+    width: 100%;
+}
+header section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header h1{
+    text-transform: uppercase;
+}
+header img{
+    width: 100px;
+}
+header section#titulo{
+    background-color: var(--pallet-7-1);
+}
+/* ======= BODY ======= */
+body{ background-color: var(--pallet-7);}
+
+/* ======= MAIN ======= */
+main{
+    background-color: var(--pallet-7);
+}
+        /* ======= ↓ ↓ NAV // BURGER ↓ ↓ ======= */
+main nav{
+    background-color: var(--pallet-3);
+    font-weight: 900;
+    font-size: larger;
+    width:fit-content;
+    text-align: center;
+    color: var(--pallet-7);
+    padding: 0.2rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 54px;
+
+    -webkit-box-shadow: 0px 0px 6px 1px #000000; 
+    box-shadow: 0px 0px 6px 1px #000000;
+
+}
+main nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 0rem;
+}
+main nav ul li{
+    padding: 0.2rem;
+    padding-left: 1rem; padding-right: 1rem;
+}
+
+main nav label:hover{
+    color: var(--pallet-1);
+    border-radius: 0.8rem;
+}
+
+main nav ul li:hover{
+    background-color: var(--pallet-5);
+    color: var(--pallet-1);
+    border-radius: 0.8rem;
+}
+
+section nav label#open{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+
+}
+section nav label#close{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    display: none;
+}
+
+.nav-menu {
+    display: none;
+}
+.menu-checkbox{
+    display: none;
+}
+
+.menu-checkbox:checked ~ label#open {
+    display: none;
+}
+.menu-checkbox:checked ~ label#close {
+    display: flex
+}
+
+.menu-checkbox:checked ~ .nav-menu {
+    display: block;
+}
+
+
+        /* ======= ↓ ↓ IMG FONDO ↓ ↓ ======= */
+
+section#fondo{ /* PARALAX */
+
+    background-image: url(../../../assets/img/RenderTaller.png);
+    min-height: 600px;
+
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom 92px;
+}
+
+
+
+        /* ======= ↓ ↓ DESTACADOS ↓ ↓ ======= */
+
+h2#titdestacados{
+    background-color: var(--pallet-7-1);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 900;
+}
+section#destacados{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--pallet-7-2);
+}
+                /* ======= ↓ ↓ ARTICLE ↓ ↓ ======= */
+section#destacados article{
+    background-color: var(--pallet-7-1);
+    border: 3px solid var(--pallet-6);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+section#destacados article:hover{
+    box-shadow: 0px 1px 5px 2px var(--sombra);
+}
+section#destacados img{
+    width: 40vw;
+}
+section#destacados section#text{
+    border-radius: 0.2rem;
+    background-color: var(--pallet-7);
+
+}
+section#destacados section#text p#modelo{
+    font-weight: 900;
+    font-size: x-large;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    padding-top: 1.2rem;
+}
+section#destacados section#text p#autonomia{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0.3rem;
+    padding-left: 1.2rem;
+}
+section#destacados section#text p#precio{
+    font-weight: 800;
+    font-size: 18px;
+    padding: 0.3rem;
+    padding-left: 1.2rem;
+    color: var(--money-1);
+}
+
+                    /* ======= ↓ ↓ BUTTON ↓ ↓ ======= */
+section#destacados section#text button#boton{
+    margin: 0.3rem;
+    margin-left: 1.6rem;margin-bottom: 1.2rem;
+}
+section#destacados button{
+    color: var(--pallet-7);
+    border-color: var(--pallet-4);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: small;
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    background-color: var(--pallet-2);
+}
+section#destacados button:hover{
+    color: var(--pallet-2);
+    background-color: var(--pallet-7);
+    box-shadow: 0px 1px 5px 2px var(--sombra);
+}
