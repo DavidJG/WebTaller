@@ -1,14 +1,11 @@
 <?php
-
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db = "agenda";
+$user = "webuser";
+$pass = "Alexito23@";
+$db   = "garajedb";
 
 // Conexión
 $conn = new mysqli($host, $user, $pass, $db);
-
-
 
 // Verificar conexión
 if ($conn->connect_error) {
@@ -16,21 +13,41 @@ if ($conn->connect_error) {
 }
 
 // Recoger datos
-$nombre = $_POST['nombre'];
-$email = $_POST['email'];
-$telefono = $_POST['telefono'];
+$nombre_usuario = trim($_POST['nombre_usuario']);
+$contraseña     = $_POST['contraseña'];
+$contraseñaconf = $_POST['contraseñaconf'];
+$tlf            = trim($_POST['tlf']);
 
-// Insertar (con prepared statement para seguridad)
-$stmt = $conn->prepare("INSERT INTO contactos (nombre, email, telefono) VALUES (?, ?, ?)");
-$stmt->bind_param("ssss", $nombre, $email, $telefono);
+// Validaciones
+if (empty($nombre_usuario) || empty($contraseña)) {
+    die("Error: nombre de usuario y contraseña son obligatorios.");
+}
+
+if ($contraseña !== $contraseñaconf) {
+    die("Error: las contraseñas no coinciden.");
+}
+
+if (strlen($contraseña) < 6) {
+    die("Error: la contraseña debe tener al menos 6 caracteres.");
+}
+
+// Cifrar contraseña
+$contraseña_hash = password_hash($contraseña, PASSWORD_DEFAULT);
+
+// Insertar
+$stmt = $conn->prepare("INSERT INTO usuarios (nombre_usuario, contraseña, tlf) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $nombre_usuario, $contraseña_hash, $tlf);
 
 if ($stmt->execute()) {
-    echo "<div class='alert alert-success'>Datos guardados correctamente</div>";
+    echo "<div class='alert alert-success'>Usuario registrado correctamente.</div>";
 } else {
-    echo "<div class='alert alert-danger'>Error: " . $stmt->error . "</div>";
+    if ($conn->errno == 1062) {
+        echo "<div class='alert alert-danger'>Error: ese nombre de usuario ya está en uso.</div>";
+    } else {
+        echo "<div class='alert alert-danger'>Error: " . $stmt->error . "</div>";
+    }
 }
 
 $stmt->close();
 $conn->close();
-
 ?>
