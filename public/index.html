@@ -89,47 +89,42 @@
 
     </section>
 
-    
     <footer>
-
-        <!-- ================       Formulario de registro       ================= -->
-
+    <!-- ================ Formulario de registro ================= -->
         <form action="guardar.php" method="post">
-            <section id="acceso">
+            <section id="registro">
+                <h3>Crear cuenta</h3>
 
-                <input type="submit" id="enviar">
-                <label for="enviar">enviar</label>
+                <label for="nombre_usuario">Nombre de usuario:</label>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
 
-                <section id="registro">
-                
-                    <label for="nombre_usuario">Nombre de usuario:</label>
-                    <input type="text" id="nombre_usuario">
-                
-                    <label for="contraseña">Contraseña:</label>
-                    <input type="text" id="contraseña">
-                
-                    <label for="contraseñaconf">Confirma contraseña:</label>
-                    <input type="text" id="contraseñaconf">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" required>
 
-                    <label for="tlf">Número de teléfono:</label>
-                    <input type="text" id="tlf">
-                
-                </section>
+                <label for="contraseñaconf">Confirma contraseña:</label>
+                <input type="password" id="contraseñaconf" name="contraseñaconf" required>
 
-                <br>
+                <label for="tlf">Número de teléfono:</label>
+                <input type="text" id="tlf" name="tlf">
 
-                <section id="login">
-                
-                    <label for="login_nombre_usuario">Nombre de usuario:</label>
-                    <input type="text" id="login_nombre_usuario">
-                
-                    <label for="login_contraseña">Contraseña:</label>
-                    <input type="text" id="login_contraseña">
-
-                </section>
+                <input type="submit" value="Registrarse">
             </section>
         </form>
 
+        <!-- ================ Formulario de login ================= -->
+        <form action="login.php" method="post">
+            <section id="login">
+                <h3>Iniciar sesión</h3>
+
+                <label for="login_nombre_usuario">Nombre de usuario:</label>
+                <input type="text" id="login_nombre_usuario" name="login_nombre_usuario" required>
+
+                <label for="login_contraseña">Contraseña:</label>
+                <input type="password" id="login_contraseña" name="login_contraseña" required>
+
+                <input type="submit" value="Entrar">
+            </section>
+        </form>
     </footer>
 </main>
 
