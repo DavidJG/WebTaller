@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,41 +94,41 @@
     </section>
 
     <footer>
-    <!-- ================ Formulario de registro ================= -->
-        <form action="guardar.php" method="post">
-            <section id="registro">
-                <h3>Crear cuenta</h3>
+        <?php if (isset($_SESSION['id_usuario'])): ?>
+            <!-- Usuario logueado -->
+            <p>Bienvenido, <?= htmlspecialchars($_SESSION['nombre_usuario']) ?>!</p>
+            <a href="logout.php">Cerrar sesión</a>
 
-                <label for="nombre_usuario">Nombre de usuario:</label>
-                <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+        <?php else: ?>
+            <!-- Formulario de registro -->
+            <form action="guardar.php" method="post">
+                <section id="registro">
+                    <h3>Crear cuenta</h3>
+                    <label for="nombre_usuario">Nombre de usuario:</label>
+                    <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" required>
+                    <label for="contraseñaconf">Confirma contraseña:</label>
+                    <input type="password" id="contraseñaconf" name="contraseñaconf" required>
+                    <label for="tlf">Número de teléfono:</label>
+                    <input type="text" id="tlf" name="tlf">
+                    <input type="submit" value="Registrarse">
+                </section>
+            </form>
 
-                <label for="contraseña">Contraseña:</label>
-                <input type="password" id="contraseña" name="contraseña" required>
+            <!-- Formulario de login -->
+            <form action="login.php" method="post">
+                <section id="login">
+                    <h3>Iniciar sesión</h3>
+                    <label for="login_nombre_usuario">Nombre de usuario:</label>
+                    <input type="text" id="login_nombre_usuario" name="login_nombre_usuario" required>
+                    <label for="login_contraseña">Contraseña:</label>
+                    <input type="password" id="login_contraseña" name="login_contraseña" required>
+                    <input type="submit" value="Entrar">
+                </section>
+            </form>
 
-                <label for="contraseñaconf">Confirma contraseña:</label>
-                <input type="password" id="contraseñaconf" name="contraseñaconf" required>
-
-                <label for="tlf">Número de teléfono:</label>
-                <input type="text" id="tlf" name="tlf">
-
-                <input type="submit" value="Registrarse">
-            </section>
-        </form>
-
-        <!-- ================ Formulario de login ================= -->
-        <form action="login.php" method="post">
-            <section id="login">
-                <h3>Iniciar sesión</h3>
-
-                <label for="login_nombre_usuario">Nombre de usuario:</label>
-                <input type="text" id="login_nombre_usuario" name="login_nombre_usuario" required>
-
-                <label for="login_contraseña">Contraseña:</label>
-                <input type="password" id="login_contraseña" name="login_contraseña" required>
-
-                <input type="submit" value="Acceder">
-            </section>
-        </form>
+        <?php endif; ?>
     </footer>
 </main>
 

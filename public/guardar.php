@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -43,12 +45,22 @@ $stmt = $conn->prepare("INSERT INTO usuarios (nombre_usuario, contraseña, tlf) 
 $stmt->bind_param("sss", $nombre_usuario, $contraseña_hash, $tlf);
 
 if ($stmt->execute()) {
-    echo "<div class='alert alert-success'>Usuario registrado correctamente.</div>";
+    
+    $_SESSION['id_usuario'] = $conn->insert_id;
+    $_SESSION['nombre_usuario'] = $nombre_usuario;
+    session_start();
+    header("Location: index.php");
+    exit;
+
 } else {
     if ($conn->errno == 1062) {
+
         echo "<div class='alert alert-danger'>Error: ese nombre de usuario ya está en uso.</div>";
+
     } else {
+
         echo "<div class='alert alert-danger'>Error: " . $stmt->error . "</div>";
+
     }
 }
 
