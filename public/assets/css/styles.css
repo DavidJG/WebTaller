@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
+
 :root{ 
 
     --pallet-1: #21203e; 
@@ -16,6 +18,12 @@
     --money-1:rgb(37, 175, 10);
 
     --sombra:#5c5c5c;
+}
+
+.jacquard-24-regular {
+  font-family: "Jacquard 24", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 * {
@@ -66,7 +74,10 @@ header section#titulo{
     background-color: var(--pallet-7-1);
 }
 /* ======= BODY ======= */
-body{ background-color: var(--pallet-7);}
+body{ 
+    background-color: var(--pallet-7);
+    font-family: ;
+}
 
 /* ======= MAIN ======= */
 main{

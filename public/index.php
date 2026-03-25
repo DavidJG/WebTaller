@@ -27,7 +27,7 @@ session_start();
     </nav>
     <section id="titulo">
         <img src="assets/img/citroen_czero-666x375-1.png" alt="Logo">
-        <h1>Taller eléctrico</h1>
+        <h1 class="jacquard-24-regular">Taller eléctrico</h1>
     </section>
 </header>
 
