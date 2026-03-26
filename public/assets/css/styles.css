@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Jacquard+24&display=swap" rel="stylesheet');
+
 
 :root{ 
 
@@ -18,13 +20,23 @@
     --money-1:rgb(37, 175, 10);
 
     --sombra:#5c5c5c;
+
+    --fuente-titulo: "Jacquard 25", system-ui;
 }
 
 .jacquard-24-regular {
-  font-family: "Jacquard 24", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
 }
+
+.jacquard-25-regular {
+    font-family: "Jacquard 25", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 * {
     margin: 0;
@@ -66,6 +78,8 @@ header section{
 }
 header h1{
     text-transform: uppercase;
+
+    font-family: var(--fuente-titulo);
 }
 header img{
     width: 100px;
