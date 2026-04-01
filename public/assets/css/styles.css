@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Jacquard+24&display=swap" rel="stylesheet');
 
 
@@ -23,13 +23,6 @@
 
     --fuente-titulo: "Jacquard 25", system-ui;
     --fuente-menu: "Iceberg", system-ui;
-}
-
-.jacquard-24-regular {
-    font-family: "Jacquard 24", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
 }
 
 .iceberg-regular {
