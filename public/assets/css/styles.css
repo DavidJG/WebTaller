@@ -165,17 +165,16 @@ section nav label#close{
 
         /* ======= ↓ ↓ IMG FONDO ↓ ↓ ======= */
 
-section#fondo{ /* PARALAX */
-
-    background-image: url(../img/car_bluprint.png);
+section#fondo {
     min-height: 600px;
-
-
+    background-image: url(../img/car_bluprint.png);
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: bottom 92px;
+
+    /* Deja que el parallax natural de fixed haga su trabajo */
+    /* El navegador posiciona la imagen relativa al viewport */
+    background-position: center center;
 }
 
 
