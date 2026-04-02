@@ -184,6 +184,7 @@ h2#titdestacados{
     font-size: 28px;
     font-weight: 900;
     padding: 1rem;
+    font-family: var(--fuente-menu);
 }
 section#destacados{
     padding-top: 1rem;
