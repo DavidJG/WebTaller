@@ -171,8 +171,7 @@ section#fondo {
     background-repeat: no-repeat;
     background-size: cover;
 
-    /* Deja que el parallax natural de fixed haga su trabajo */
-    /* El navegador posiciona la imagen relativa al viewport */
+    margin-top: 60px;
     background-position: center top;
 }
 
