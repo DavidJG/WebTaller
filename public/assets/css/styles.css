@@ -174,7 +174,7 @@ section#fondo {
 
     /* Deja que el parallax natural de fixed haga su trabajo */
     /* El navegador posiciona la imagen relativa al viewport */
-    background-position: center bottom;
+    background-position: center top;
 }
 
 
