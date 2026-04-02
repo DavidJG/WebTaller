@@ -55,7 +55,7 @@ session_start();
     <h2 id="titdestacados">Destacados</h2>
     <section id="destacados">
         <article>
-            <img src="assets/img/citroen_czero-666x375-1.png" alt="Coche">
+            <img src="assets/img/c0pictures/angle.png" alt="Coche">
             <section id="text">
                 <p id="modelo">Citroen C0</p>
                 <p id="autonomia">200 Km autonomia</p>

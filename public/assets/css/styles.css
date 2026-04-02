@@ -21,7 +21,7 @@
 
     --sombra:#5c5c5c;
 
-    --fuente-menu: "Zen Dots", system-ui;
+    --fuente-titulo: "Zen Dots", system-ui;
 }
 
 .zen-dots-regular {
@@ -70,7 +70,7 @@ header section{
 }
 header h1{
     text-transform: uppercase;
-    font-family: var(--fuente-menu);
+    font-family: var(--fuente-titulo);
 }
 header img{
     width: 100px;
@@ -184,7 +184,7 @@ h2#titdestacados{
     font-size: 28px;
     font-weight: 900;
     padding: 1rem;
-    font-family: var(--fuente-menu);
+    font-family: var(--fuente-titulo);
 }
 section#destacados{
     padding-top: 1rem;
