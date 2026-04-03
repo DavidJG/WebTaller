@@ -64,7 +64,7 @@ session_start();
             </section>
         </article>
         <article>
-            <img src="assets/img/c0pictures/2.png" alt="Coche">
+            <img src="assets/img/c0pictures/1.png" alt="Coche">
             <section id="text">
                 <p id="modelo">Citroen C0</p>
                 <p id="autonomia">200 Km autonomia</p>
