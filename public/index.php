@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -64,7 +64,7 @@ session_start();
             </section>
         </article>
         <article>
-            <img src="assets/img/citroen_czero-666x375-1.png" alt="Coche">
+            <img src="assets/img/c0pictures/2.png" alt="Coche">
             <section id="text">
                 <p id="modelo">Citroen C0</p>
                 <p id="autonomia">200 Km autonomia</p>
