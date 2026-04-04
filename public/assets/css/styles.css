@@ -92,8 +92,8 @@ header img{
 }
 header section#titulo{
     background-color: var(--pallet-7-1);
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 28px 45px -7px rgba(0,0,0,0.11); 
-    box-shadow: 0px 10px 13px -7px #000000, 0px 28px 45px -7px rgba(0,0,0,0.11);
+    -webkit-box-shadow: 0px 0px 16px 0px #000000; 
+    box-shadow: 0px 0px 16px 0px #000000;
 }
 /* ======= BODY ======= */
 body{ 
