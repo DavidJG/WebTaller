@@ -1,6 +1,6 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap');*/
 @import url('link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"');
-
+@import url('link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"');
 
 :root{ 
 
@@ -22,6 +22,18 @@
     --sombra:#5c5c5c;
 
     --fuente-titulo: "Zen Dots", system-ui;
+    --fuente-texto: "IBM Plex Sans", system-ui;
+}
+
+/* ======= FONTS ======= */
+
+.ibm-plex-sans {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;  /* 100 - 700 */
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
 .zen-dots-regular {
@@ -30,10 +42,13 @@
     font-style: normal;
 }
 
+/* ======= BASE CONFIG ======= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--fuente-texto);
 }
 
 /* ======= HEADER ======= */
