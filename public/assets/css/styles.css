@@ -201,7 +201,7 @@ section#fondo {
 
         /* ======= ↓ ↓ DESTACADOS ↓ ↓ ======= */
 
-h2#titdestacados{
+h2#titseccion{
     background-color: var(--pallet-7-1);
     text-align: center;
     font-size: 28px;

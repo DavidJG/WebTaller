@@ -56,7 +56,7 @@ session_start();
 
     
     
-    <h2 id="titdestacados">Destacados</h2>
+    <h2 id="titseccion">Destacados</h2>
     <section id="destacados">
         <article>
             <img src="assets/img/c0pictures/angle.png" alt="Coche">
@@ -78,24 +78,30 @@ session_start();
         </article>
     </section>
 
-    <section>
-        <h2>Nuestros servicios</h2>
+
+    <h2 id="titseccion">Nuestros servicios</h2>
+    <section id="servicios">
+
+        <article id="CochePreparado">
+            <h3>Coches preparados</h3>
+        </article>
+        <article id="ReemplazoCeldas">
+            <h3>Reemplazo de celdas</h3>
+        </article>
+        <article id="SAIs">
+            <h3>Sistemas de alimentación ininterrumpida</h3>
+        </article>
+
     </section>
 
+<!-- 
     <section id="galeria">
         <article>
             <img src="assets/img/citroen_czero-666x375-1.png" alt="Coche">
             <img src="assets/img/citroen_czero-666x375-1.png" alt="Coche">
         </article>
     </section>
-
-    <section id="servicios">
-
-        <article id="CochePreparado"></article>
-        <article id="ReemplazoCeldas"></article>
-        <article id="SAIs"></article>
-
-    </section>
+-->
 
     <footer>
         <?php if (isset($_SESSION['id_usuario'])): ?>
