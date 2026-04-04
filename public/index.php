@@ -30,7 +30,7 @@ session_start();
 -->
 
     <section id="titulo">
-        <img src="assets/img/citroen_czero-666x375-1.png" alt="Logo">
+        <img src="assets/img/c0pictures/c0transparent.png" alt="Logo">
         <h1 class="jacquard-24-regular">Electro taller</h1>
     </section>
 </header>
