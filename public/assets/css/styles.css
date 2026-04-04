@@ -86,7 +86,7 @@ header section{
     justify-content: center;
     align-items: center;
     
-    color: var(--bluprint-3);
+    color: var(--pallet-8);
     background-color: var(--bluprint-1);
 }
 header h1{
