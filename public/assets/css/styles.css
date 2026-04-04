@@ -197,11 +197,9 @@ section#fondo {
     background-position: center top;
 }
 
+        /* ======= ↓ ↓ H2 ↓ ↓ ======= */
 
-
-        /* ======= ↓ ↓ DESTACADOS ↓ ↓ ======= */
-
-h2#titseccion{
+h2#titseccion1{ /* primer h2 */
     background-color: var(--pallet-7-1);
     text-align: center;
     font-size: 28px;
@@ -209,6 +207,17 @@ h2#titseccion{
     padding: 1rem;
     font-family: var(--fuente-titulo);
 }
+h2#titseccion{ /* resto de h2 con márgen */
+    margin-top: 2rem;
+    background-color: var(--pallet-7-1);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 900;
+    padding: 1rem;
+    font-family: var(--fuente-titulo);
+}
+        /* ======= ↓ ↓ DESTACADOS ↓ ↓ ======= */
+
 section#destacados{
     padding-top: 1rem;
     display: flex;

@@ -56,7 +56,7 @@ session_start();
 
     
     
-    <h2 id="titseccion">Destacados</h2>
+    <h2 id="titseccion1">Destacados</h2>
     <section id="destacados">
         <article>
             <img src="assets/img/c0pictures/angle.png" alt="Coche">
