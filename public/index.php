@@ -17,6 +17,8 @@ session_start();
 <body>
 
 <header>
+
+<!--  
     <nav>
         <ul>
             <li>ent 1</li>
@@ -25,6 +27,8 @@ session_start();
             <li>ent 4</li>
         </ul>
     </nav>
+-->
+
     <section id="titulo">
         <img src="assets/img/citroen_czero-666x375-1.png" alt="Logo">
         <h1 class="jacquard-24-regular">Electro taller</h1>
