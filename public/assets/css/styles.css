@@ -273,7 +273,7 @@ section#destacados section#text p#precio{
                     /* ======= ↓ ↓ BUTTON ↓ ↓ ======= */
 section#destacados section#text button#boton{
     display: block;
-    margin: 0.3rem 1.6rem 1.2rem auto;
+    margin: 0.3rem 1.6rem 1.8rem auto;
 }
 section#destacados button{
     color: var(--pallet-7);
