@@ -62,7 +62,7 @@ $conn->close();
 
         <?php while ($coche = $destacados->fetch_assoc()): ?>
         <article>
-            <img src="assets/img/coches/<?= $coche['id_destacados'] ?>.png" alt="<?= htmlspecialchars($coche['marca'] . ' ' . $coche['modelo']) ?>">
+            <img src="assets/img/coches/<?= $coche['id'] ?>.png" alt="<?= htmlspecialchars($coche['marca'] . ' ' . $coche['modelo']) ?>">
             <section class="text">
                 <p class="modelo"><?= htmlspecialchars($coche['marca'] . ' ' . $coche['modelo']) ?></p>
                 <p class="autonomia"><?= $coche['autonomia_km'] ?> Km autonomía</p>
