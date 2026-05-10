@@ -225,7 +225,7 @@ h2#titseccion{ /* resto de h2 con márgen */
 section#destacados{
     padding-top: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     background-color: var(--pallet-7-2);
 }
                 /* ======= ↓ ↓ ARTICLE ↓ ↓ ======= */
