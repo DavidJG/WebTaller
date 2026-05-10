@@ -1,5 +1,17 @@
 <?php
 session_start();
+require_once 'conexion.php';
+
+// Consulta coches destacados
+$stmt = $conn->prepare("
+    SELECT c.id, c.marca, c.modelo, c.autonomia_km, c.descripcion, c.precio_venta
+    FROM destacados d
+    JOIN coche c ON d.id_destacados = c.id
+");
+$stmt->execute();
+$destacados = $stmt->get_result();
+$stmt->close();
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +29,6 @@ session_start();
 <body>
 
 <header>
-
-<!--  
-    <nav>
-        <ul>
-            <li>ent 1</li>
-            <li>ent 2</li>
-            <li>ent 3</li>
-            <li>ent 4</li>
-        </ul>
-    </nav>
--->
 
     <section id="titulo">
         <img src="assets/img/c0pictures/c0transparent.png" alt="Logo">
@@ -58,28 +59,20 @@ session_start();
     
     <h2 id="titseccion1">Destacados</h2>
     <section id="destacados">
+
+        <?php while ($coche = $destacados->fetch_assoc()): ?>
         <article>
-            <img src="assets/img/c0pictures/angle.png" alt="Coche">
-            <section id="text">
-                <p id="modelo">Citroen C0</p>
-                <p id="autonomia">200 Km autonomia</p>
-                <p id="descripcion">Coche automático con 4 plazas y 5 puertas ideal para el transporte y la vida en la ciudad</p>
-                <p id="precio">6000€</p>
-                <button type="button" id="boton">Ver más</button>
-                
+            <img src="assets/img/coches/<?= $coche['id'] ?>.png" alt="<?= htmlspecialchars($coche['marca'] . ' ' . $coche['modelo']) ?>">
+            <section class="text">
+                <p class="modelo"><?= htmlspecialchars($coche['marca'] . ' ' . $coche['modelo']) ?></p>
+                <p class="autonomia"><?= $coche['autonomia_km'] ?> Km autonomía</p>
+                <p class="descripcion"><?= htmlspecialchars($coche['descripcion']) ?></p>
+                <p class="precio"><?= number_format($coche['precio_venta'], 0, ',', '.') ?>€</p>
+                <button type="button" class="boton">Ver más</button>
             </section>
         </article>
-        <article>
-            <img src="assets/img/c0pictures/1.png" alt="Coche">
-            <section id="text">
-                <p id="modelo">Citroen C0</p>
-                <p id="autonomia">200 Km autonomia</p>
-                <p id="descripcion">Coche automático con 4 plazas y 5 puertas ideal para el transporte y la vida en la ciudad</p>
-                <p id="precio">6000€</p>
-                <button type="button" id="boton">Ver más</button>
-                
-            </section>
-        </article>
+        <?php endwhile; ?>
+
     </section>
 
 
