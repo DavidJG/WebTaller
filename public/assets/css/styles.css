@@ -234,13 +234,12 @@ section#destacados {
     padding-left: 2rem;
     padding-right: 2rem;
     
-    /* REMOVE SCROLLBAR (Standard) */
+    /* QUITAR SCROLLBAR */
     scrollbar-width: none;      /* Firefox */
     -ms-overflow-style: none;   /* IE and Edge */
 }
-
 section#destacados::-webkit-scrollbar { 
-    /* REMOVE SCROLLBAR (Chrome, Safari, Opera) */
+    /* QUITAR SCROLLBAR (Chrome, Safari, Opera) */
     display: none;
 }
                 /* ======= ↓ ↓ ARTICLE ↓ ↓ ======= */
@@ -266,14 +265,13 @@ section#destacados article:hover {
 section#destacados img {
     display: block;
     margin: 0 auto;
-    width: 100%; /* Scales with the larger article */
+    width: 100%;
     height: auto;
 }
 section#destacados section.text {
     border-radius: 0.2rem;
     background-color: var(--pallet-7);
-    /* This ensures the text section fills the card height */
-    flex-grow: 1; 
+    flex-grow: 1; /* text llena todo articulo */
     display: flex;
     flex-direction: column;
 }
@@ -301,10 +299,10 @@ section#destacados section.text p.precio{
 
                     /* ======= ↓ ↓ BUTTON ↓ ↓ ======= */
 section#destacados section.text button.boton {
-    margin-top: auto; /* Pushes button to the bottom of the text area */
+    margin-top: auto;       /* boton abajo */
     margin-right: 1rem;
     margin-bottom: 1rem;
-    align-self: flex-end; /* Keeps it to the right */
+    align-self: flex-end;   /* boton derecha */
 }
 section#destacados button{
     color: var(--pallet-7);
