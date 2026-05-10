@@ -274,7 +274,7 @@ section#destacados section#text p#precio{
 section#destacados section#text button#boton{
     margin: 0.3rem;
     margin-left: 1.6rem;margin-bottom: 1.2rem;
-    justify-self: right;
+    justify-content: right;
 }
 section#destacados button{
     color: var(--pallet-7);
