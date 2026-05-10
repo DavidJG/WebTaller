@@ -234,7 +234,9 @@ section#destacados article{
     border: 3px solid var(--pallet-6);
     border-radius: 1rem;
     padding: 1rem;
+    width: 30vw;
     max-width: 400px;
+    min-width: 300px;
 }
 section#destacados article:hover{
     box-shadow: 0px 1px 5px 2px var(--sombra);
