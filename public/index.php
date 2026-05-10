@@ -66,6 +66,7 @@ session_start();
                 <p id="descripcion">Coche automático con 4 plazas y 5 puertas ideal para el transporte y la vida en la ciudad</p>
                 <p id="precio">6000€</p>
                 <button type="button" id="boton">Ver más</button>
+                <br>
             </section>
         </article>
         <article>
@@ -76,6 +77,7 @@ session_start();
                 <p id="descripcion">Coche automático con 4 plazas y 5 puertas ideal para el transporte y la vida en la ciudad</p>
                 <p id="precio">6000€</p>
                 <button type="button" id="boton">Ver más</button>
+                <br>
             </section>
         </article>
     </section>
