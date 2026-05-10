@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once 'conexion.php';
+require_once 'sai.php';
 
 // Consulta coches destacados
 $stmt = $conn->prepare("
@@ -86,8 +87,46 @@ $conn->close();
             <h3>Reemplazo de celdas</h3>
         </article>
         <article id="SAIs">
-            <h3>Sistemas de alimentación ininterrumpida</h3>
-        </article>
+    <h3>Sistemas de alimentación ininterrumpida</h3>
+
+    <section id="calculadora">
+        <form method="post" action="index.php">
+
+            <label for="consumo_w">Consumo (W):</label>
+            <input type="number" id="consumo_w" name="consumo_w" min="1"
+                value="<?= isset($_POST['consumo_w']) ? htmlspecialchars($_POST['consumo_w']) : '' ?>">
+
+            <label for="horas">Horas de autonomía:</label>
+            <input type="number" id="horas" name="horas" min="1" step="0.5"
+                value="<?= isset($_POST['horas']) ? htmlspecialchars($_POST['horas']) : '' ?>">
+
+            <label for="tipo_bateria">Tipo de batería:</label>
+            <select id="tipo_bateria" name="tipo_bateria">
+                <?php foreach ($baterias as $i => $b): ?>
+                    <option value="<?= $i ?>" <?= (isset($_POST['tipo_bateria']) && $_POST['tipo_bateria'] == $i) ? 'selected' : '' ?>>
+                        <?= $b['nombre'] ?> - <?= $b['capacidad_wh'] ?>Wh - <?= $b['precio'] ?>€
+                    </option>
+                <?php endforeach; ?>
+            </select>
+
+            <input type="submit" value="Calcular">
+
+        </form>
+
+        <?php if ($error): ?>
+            <p class="error"><?= $error ?></p>
+        <?php elseif ($resultado): ?>
+            <section id="resultado">
+                <h3>Resultado</h3>
+                <p>Energía necesaria (margen 20%): <strong><?= $resultado['energia_necesaria'] ?> Wh</strong></p>
+                <p>Batería: <strong><?= $resultado['bateria'] ?></strong></p>
+                <p>Unidades necesarias: <strong><?= $resultado['num_baterias'] ?></strong></p>
+                <p class="precio-total">Precio estimado: <strong><?= number_format($resultado['precio_total'], 0, ',', '.') ?>€</strong></p>
+            </section>
+        <?php endif; ?>
+
+    </section>
+</article>
 
     </section>
 
