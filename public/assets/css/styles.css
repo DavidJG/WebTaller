@@ -239,7 +239,7 @@ section#destacados article:hover{
     box-shadow: 0px 1px 5px 2px var(--sombra);
 }
 section#destacados img{
-    width: 40vw;
+    width: 10vw;
 }
 section#destacados section#text{
     border-radius: 0.2rem;
