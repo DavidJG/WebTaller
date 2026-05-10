@@ -322,6 +322,64 @@ section#destacados button:hover{
 }
 
 
+/* ======= CALCULADORA SAI ======= */
+section#calculadora {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--pallet-7-1);
+    border: 2px solid var(--pallet-6);
+    border-radius: 1rem;
+}
+section#calculadora form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+section#calculadora input[type="number"],
+section#calculadora select {
+    padding: 0.4rem;
+    border: 1px solid var(--pallet-5);
+    border-radius: 0.3rem;
+    font-size: 16px;
+}
+section#calculadora input[type="submit"] {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--pallet-2);
+    color: var(--pallet-7);
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+section#calculadora input[type="submit"]:hover {
+    background-color: var(--pallet-3);
+}
+section#resultado {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--pallet-7);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+section#resultado h3 {
+    margin-bottom: 0.5rem;
+    font-family: var(--fuente-titulo);
+}
+p.precio-total {
+    color: var(--money-1);
+    font-size: 18px;
+}
+p.error {
+    color: red;
+    margin-top: 1rem;
+}
+
+
 
 @media screen and (max-width:768px) {
 
