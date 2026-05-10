@@ -240,7 +240,8 @@ section#destacados article:hover{
     box-shadow: 0px 1px 5px 2px var(--sombra);
 }
 section#destacados img{
-    padding: auto;
+    display: block;
+    margin: 0 auto;;
     width: 25vw;
     max-width: 360px;
     min-width: 260px;
