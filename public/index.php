@@ -63,8 +63,8 @@ session_start();
             <section id="text">
                 <p id="modelo">Citroen C0</p>
                 <p id="autonomia">200 Km autonomia</p>
-                <p id="precio">6000€</p>
                 <p id="descripcion">Coche automático con 4 plazas y 5 puertas ideal para el transporte y la vida en la ciudad</p>
+                <p id="precio">6000€</p>
                 <button type="button" id="boton">Ver más</button>
             </section>
         </article>
@@ -73,8 +73,8 @@ session_start();
             <section id="text">
                 <p id="modelo">Citroen C0</p>
                 <p id="autonomia">200 Km autonomia</p>
-                <p id="precio">6000€</p>
                 <p id="descripcion">Coche automático con 4 plazas y 5 puertas ideal para el transporte y la vida en la ciudad</p>
+                <p id="precio">6000€</p>
                 <button type="button" id="boton">Ver más</button>
             </section>
         </article>
