@@ -222,45 +222,60 @@ h2#titseccion{ /* resto de h2 con márgen */
 }
         /* ======= ↓ ↓ DESTACADOS ↓ ↓ ======= */
 
-section#destacados{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+section#destacados {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     justify-content: flex-start;
     background-color: var(--pallet-7-2);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+    /* REMOVE SCROLLBAR (Standard) */
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE and Edge */
+}
+
+section#destacados::-webkit-scrollbar { 
+    /* REMOVE SCROLLBAR (Chrome, Safari, Opera) */
+    display: none;
 }
                 /* ======= ↓ ↓ ARTICLE ↓ ↓ ======= */
-section#destacados article{
+section#destacados article {
     background-color: var(--pallet-7-1);
     border: 3px solid var(--pallet-6);
     border-radius: 1rem;
     padding: 1rem;
     scroll-snap-align: start;
     flex-shrink: 0;
-    width: 30vw;
-    max-width: 400px;
-    min-width: 300px;
+    
+    width: 40vw;
+    max-width: 500px;
+    min-width: 350px;
+    
+    display: flex;
+    flex-direction: column;
 }
 
-section#destacados article:hover{
-    box-shadow: 0px 1px 5px 2px var(--sombra);
+section#destacados article:hover {
+    box-shadow: 0px 1px 15px 2px var(--sombra);
 }
-section#destacados img{
+section#destacados img {
     display: block;
-    margin: 0 auto;;
-    width: 25vw;
-    max-width: 360px;
-    min-width: 260px;
+    margin: 0 auto;
+    width: 100%; /* Scales with the larger article */
+    height: auto;
 }
-section#destacados section.text{
+section#destacados section.text {
     border-radius: 0.2rem;
     background-color: var(--pallet-7);
-
+    /* This ensures the text section fills the card height */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
 }
 section#destacados section.text p.modelo{
     font-weight: 900;
@@ -285,10 +300,11 @@ section#destacados section.text p.precio{
 }
 
                     /* ======= ↓ ↓ BUTTON ↓ ↓ ======= */
-section#destacados section.text button.boton{
-    display: block;
-    margin: 0.3rem 1.6rem 1.8rem auto;
-    
+section#destacados section.text button.boton {
+    margin-top: auto; /* Pushes button to the bottom of the text area */
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    align-self: flex-end; /* Keeps it to the right */
 }
 section#destacados button{
     color: var(--pallet-7);
