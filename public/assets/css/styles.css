@@ -344,7 +344,7 @@ section#catalogo article {
     background-color: var(--pallet-7-1);
     border: 3px solid var(--pallet-6);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.2rem;
     scroll-snap-align: start;
     min-width: 220px;
     max-width: 320px;
