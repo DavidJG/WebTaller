@@ -9,16 +9,20 @@ $stmt = $conn->prepare("
     FROM destacados d
     JOIN coche c ON d.id_destacados = c.id
 ");
+
+$stmt->execute();
+$destacados = $stmt->get_result();
+$stmt->close();
+$conn->close();
+
 // select * from coches
 $stmt2 = $conn->prepare("SELECT id, marca, modelo, autonomia_km, descripcion, precio_venta, estado FROM coche");
 
-$stmt->execute();
 $stmt2->execute();
-$destacados = $stmt->get_result();
 $coches = $stmt2->get_result();
-$stmt->close();
 $stmt2->close();
 $conn->close();
+
 ?>
 
 <!DOCTYPE html>
