@@ -400,7 +400,7 @@ p.estado.reservado   { background-color: #cce5ff; color: #004085; }
 
 section#catalogo button.boton {
     display: block;
-    margin: 0.5rem 1.2rem 1.2rem 1rem;
+    margin: 0.5rem 1.2rem 1.2rem auto;
     color: var(--pallet-7);
     border-color: var(--pallet-4);
     text-transform: uppercase;
