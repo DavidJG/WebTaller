@@ -358,8 +358,8 @@ section#catalogo article {
     border-radius: 1rem;
     padding: 1rem;
     scroll-snap-align: start;
-    min-width: 280px;
-    max-width: 380px;
+    min-width: 450px;
+    max-width: 480px;
 }
 section#catalogo article:hover {
     box-shadow: 0px 1px 5px 2px var(--sombra);
