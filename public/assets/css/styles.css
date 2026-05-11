@@ -240,7 +240,7 @@ section#destacados {
     justify-content: flex-start;
     background-color: var(--pallet-7-2);
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     gap: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
