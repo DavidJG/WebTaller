@@ -325,21 +325,31 @@ section#destacados button:hover{
 
 /* ======= CATÁLOGO ======= */
 section#catalogo {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: 28vw;
     gap: 1.5rem;
     padding: 2rem;
     background-color: var(--pallet-7-2);
-    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    /* QUITAR SCROLLBAR */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+section#catalogo::-webkit-scrollbar {
+    display: none;
 }
 section#catalogo article {
     background-color: var(--pallet-7-1);
     border: 3px solid var(--pallet-6);
     border-radius: 1rem;
     padding: 1rem;
-    width: 28vw;
-    max-width: 380px;
+    scroll-snap-align: start;
     min-width: 280px;
+    max-width: 380px;
 }
 section#catalogo article:hover {
     box-shadow: 0px 1px 5px 2px var(--sombra);
