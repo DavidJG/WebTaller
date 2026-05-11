@@ -328,8 +328,8 @@ section#catalogo {
     display: grid;
     grid-template-rows: repeat(2, auto);
     grid-auto-flow: column;
-    grid-auto-columns: 28vw;
-    gap: 1.5rem;
+    grid-auto-columns: 20vw;
+    gap: 0.5rem;
     padding: 2rem;
     background-color: var(--pallet-7-2);
     overflow-x: auto;
