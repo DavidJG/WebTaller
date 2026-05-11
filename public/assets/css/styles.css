@@ -76,6 +76,9 @@ header nav ul{
     font-size: large;
     font-weight: 900;
 }
+header nav ul li a{
+    text-decoration: none;
+}
 header nav ul li:hover{
     text-decoration: underline;
 }
