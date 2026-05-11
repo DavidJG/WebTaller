@@ -61,27 +61,7 @@
 
 /* ======= HEADER ======= */
 
-        /* ======= ↓ ↓ NAV ↓ ↓ ======= */
-header nav{
-    background-color: var(--pallet-2);
-    color: var(--pallet-7);
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-}
-header nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
 
-    font-size: large;
-    font-weight: 900;
-}
-header nav ul li a{
-    text-decoration: none;
-}
-header nav ul li:hover{
-    text-decoration: underline;
-}
 
         /* ======= ↓ ↓ TÍTULO ↓ ↓ ======= */
 header{
