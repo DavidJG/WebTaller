@@ -3,15 +3,21 @@ session_start();
 require_once 'conexion.php';
 require_once 'sai.php';
 
-// Consulta coches destacados
+// JOIN para Coches preparados
 $stmt = $conn->prepare("
     SELECT c.id, c.marca, c.modelo, c.autonomia_km, c.descripcion, c.precio_venta
     FROM destacados d
     JOIN coche c ON d.id_destacados = c.id
 ");
+// select * from coches
+$stmt2 = $conn->prepare("SELECT id, marca, modelo, autonomia_km, descripcion, precio_venta, estado FROM coche");
+
 $stmt->execute();
+$stmt2->execute();
 $destacados = $stmt->get_result();
+$coches = $stmt2->get_result();
 $stmt->close();
+$stmt2->close();
 $conn->close();
 ?>
 
@@ -82,6 +88,25 @@ $conn->close();
 
         <article id="CochePreparado">
             <h3 id="titservicio">Coches preparados</h3>
+                <section id="catalogo">
+
+                <?php while ($coche = $coches->fetch_assoc()): ?>
+                <article>
+                    <img src="assets/img/coches/<?= $coche['id'] ?>.png" alt="<?= htmlspecialchars($coche['marca'] . ' ' . $coche['modelo']) ?>">
+                    <section class="text">
+                        <p class="modelo"><?= htmlspecialchars($coche['marca'] . ' ' . $coche['modelo']) ?></p>
+                        <p class="autonomia"><?= $coche['autonomia_km'] ?> Km autonomía</p>
+                        <p class="descripcion"><?= htmlspecialchars($coche['descripcion']) ?></p>
+                        <p class="precio"><?= number_format($coche['precio_venta'], 0, ',', '.') ?>€</p>
+                        <p class="estado <?= $coche['estado'] ?>"><?= ucfirst(str_replace('_', ' ', $coche['estado'])) ?></p>
+                        <button type="button" class="boton">Ver más</button>
+                    </section>
+                </article>
+                <?php endwhile; ?>
+
+            </section>
+
+
         </article>
         <article id="ReemplazoCeldas">
             <h3 id="titservicio">Reemplazo de celdas</h3>

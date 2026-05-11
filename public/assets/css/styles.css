@@ -322,6 +322,90 @@ section#destacados button:hover{
     box-shadow: 0px 1px 5px 2px var(--sombra);
 }
 
+/* ======= CATÁLOGO ======= */
+section#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--pallet-7-2);
+    justify-content: center;
+}
+section#catalogo article {
+    background-color: var(--pallet-7-1);
+    border: 3px solid var(--pallet-6);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 28vw;
+    max-width: 380px;
+    min-width: 280px;
+}
+section#catalogo article:hover {
+    box-shadow: 0px 1px 5px 2px var(--sombra);
+}
+section#catalogo img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+section#catalogo section.text {
+    background-color: var(--pallet-7);
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+}
+section#catalogo section.text p.modelo {
+    font-weight: 900;
+    font-size: x-large;
+    padding: 0.3rem 0.3rem 0.3rem 1rem;
+    padding-top: 1rem;
+}
+section#catalogo section.text p.autonomia,
+section#catalogo section.text p.descripcion {
+    font-size: 16px;
+    padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+}
+section#catalogo section.text p.precio {
+    font-weight: 800;
+    font-size: 18px;
+    padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+    color: var(--money-1);
+}
+
+/* Estados */
+section#catalogo p.estado {
+    display: inline-block;
+    margin: 0.3rem 0 0.3rem 1.2rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+p.estado.venta       { background-color: #d4edda; color: #155724; }
+p.estado.en_taller   { background-color: #fff3cd; color: #856404; }
+p.estado.vendido     { background-color: #f8d7da; color: #721c24; }
+p.estado.reservado   { background-color: #cce5ff; color: #004085; }
+
+section#catalogo button.boton {
+    display: block;
+    margin: 0.5rem 1.2rem 1.2rem auto;
+    color: var(--pallet-7);
+    border-color: var(--pallet-4);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: small;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    background-color: var(--pallet-2);
+    cursor: pointer;
+}
+section#catalogo button.boton:hover {
+    color: var(--pallet-2);
+    background-color: var(--pallet-7);
+    box-shadow: 0px 1px 5px 2px var(--sombra);
+}
+
 /* ======= CALCULADORA SAI ======= */       /* ======= CALCULADORA SAI ======= */
 
 section#calculadora {
