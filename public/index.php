@@ -13,7 +13,7 @@ $stmt = $conn->prepare("
 $stmt->execute();
 $destacados = $stmt->get_result();
 $stmt->close();
-$conn->close();
+
 
 // select * from coches
 $stmt2 = $conn->prepare("SELECT id, marca, modelo, autonomia_km, descripcion, precio_venta, estado FROM coche");
