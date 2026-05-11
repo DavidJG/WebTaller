@@ -192,7 +192,7 @@ section nav label#close{
 
 section#fondo {
     min-height: 87vh;
-    background-image: url(../img/car_bluprint.png);
+    background-image: url(../img/car_bluprint.png); /* cambiar a BD */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

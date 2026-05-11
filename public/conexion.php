@@ -1,4 +1,9 @@
 <?php
+
+//===================================//
+//      conexion a BD estandar       //
+//===================================//
+
 $host = "localhost";
 $user = "webuser";
 $pass = "Alexito23@";
