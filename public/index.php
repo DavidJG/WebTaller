@@ -44,8 +44,8 @@ $conn->close();
             <label id="open" for="toggle">☰</label>
             <label id="close" for="toggle">↪</label>
                 <ul class="nav-menu">
-                    <li>Menu 1</li>
-                    <li>Menu 2</li>
+                    <li><a href="#destacados">Destacados</a></li>
+                    <li>SAI's</li>
                     <li>END</li>
                 </ul>
         </nav>
