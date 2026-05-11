@@ -31,6 +31,16 @@
 
     --fuente-titulo: "Zen Dots", system-ui;
     --fuente-texto: "IBM Plex Sans", system-ui;
+
+    --bg-est-venta: #cde8d0;
+    --bg-est-taller: #c3ba9d;
+    --bg-est-vendido: #f6cdd5;
+    --bg-est-reservado: #bedcf5;
+
+    --est-venta: #135c22;
+    --est-taller: #896d09;
+    --est-vendido: #701b29;
+    --est-reservado: #043d88;
 }
 
 /* ======= FONTS ======= */
@@ -393,10 +403,10 @@ section#catalogo p.estado {
     font-weight: 700;
     text-transform: uppercase;
 }
-p.estado.venta       { background-color: #d4edda; color: #155724; }
-p.estado.en_taller   { background-color: #fff3cd; color: #856404; }
-p.estado.vendido     { background-color: #f8d7da; color: #721c24; }
-p.estado.reservado   { background-color: #cce5ff; color: #004085; }
+p.estado.venta       { background-color: var(--bg-est-venta); color: var(--est-venta); }
+p.estado.en_taller   { background-color: var(--bg-est-taller); color: var(--est-taller); }
+p.estado.vendido     { background-color: var(--bg-est-vendido); color: var(--est-vendido); }
+p.estado.reservado   { background-color: var(--bg-est-reservado); color: var(--est-reservado); }
 
 section#catalogo button.boton {
     display: block;
