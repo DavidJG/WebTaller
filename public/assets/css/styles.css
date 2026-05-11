@@ -326,7 +326,7 @@ section#destacados button:hover{
 /* ======= CATÁLOGO ======= */
 section#catalogo {
     display: grid;
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
     grid-auto-flow: column;
     grid-auto-columns: 20vw;
     gap: 0.5rem;
