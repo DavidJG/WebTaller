@@ -61,8 +61,6 @@
 
 /* ======= HEADER ======= */
 
-
-
         /* ======= ↓ ↓ TÍTULO ↓ ↓ ======= */
 header{
     position: fixed;
@@ -116,6 +114,9 @@ main nav{
     -webkit-box-shadow: 0px 0px 6px 1px #000000; 
     box-shadow: 0px 0px 6px 1px #000000;
 
+}
+main nav ul li a{
+    text-decoration: none;
 }
 main nav ul{
     list-style: none;
