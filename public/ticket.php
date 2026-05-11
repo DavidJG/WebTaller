@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['marca_ticket'])) {
             $stmt = $conn->prepare("INSERT INTO tickets (id_usuario, marca, modelo, autonomia_objetivo) VALUES (?, ?, ?, ?)");
             $stmt->bind_param("issi", $_SESSION['id_usuario'], $marca, $modelo, $autonomia_obj);
             if ($stmt->execute()) {
-                $ticket_mensaje = "✔ Solicitud enviada correctamente. Nos pondremos en contacto contigo pronto.";
+                $ticket_mensaje = "Solicitud enviada correctamente. Nos pondremos en contacto contigo pronto.";
             } else {
                 $ticket_error = "Error al enviar la solicitud.";
             }
