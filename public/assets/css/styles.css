@@ -262,7 +262,7 @@ section#destacados article {
     scroll-snap-align: start;
     flex-shrink: 0;
     
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
 
     width: 40vw;
     max-width: 500px;
