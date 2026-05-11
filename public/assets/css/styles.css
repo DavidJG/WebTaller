@@ -119,6 +119,10 @@ main nav ul li a{
     text-decoration: none;
     color: var(--pallet-7);
 }
+main nav ul li a:hover{
+    text-decoration: underline;
+    color: var(--link-1);
+}
 main nav ul{
     list-style: none;
     display: flex;
