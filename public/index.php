@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once 'conexion.php';
+require_once 'ticket.php';
 require_once 'sai.php';
 
 // JOIN para Coches preparados
@@ -114,6 +115,39 @@ $conn->close();
         </article>
         <article id="ReemplazoCeldas">
             <h3 id="titservicio">Reemplazo de celdas</h3>
+
+            <?php if (isset($_SESSION['id_usuario'])): ?>
+
+                <section id="formulario-ticket">
+                    <?php if ($ticket_mensaje): ?>
+                        <p class="ticket-ok"><?= $ticket_mensaje ?></p>
+                    <?php elseif ($ticket_error): ?>
+                        <p class="error"><?= $ticket_error ?></p>
+                    <?php endif; ?>
+
+                    <form method="post" action="index.php">
+                        <label for="marca_ticket">Marca de tu coche:</label>
+                        <input type="text" id="marca_ticket" name="marca_ticket" required
+                            value="<?= isset($_POST['marca_ticket']) ? htmlspecialchars($_POST['marca_ticket']) : '' ?>">
+
+                        <label for="modelo_ticket">Modelo:</label>
+                        <input type="text" id="modelo_ticket" name="modelo_ticket" required
+                            value="<?= isset($_POST['modelo_ticket']) ? htmlspecialchars($_POST['modelo_ticket']) : '' ?>">
+
+                        <label for="autonomia_objetivo">Autonomía objetivo (km):</label>
+                        <input type="number" id="autonomia_objetivo" name="autonomia_objetivo" min="1" required
+                            value="<?= isset($_POST['autonomia_objetivo']) ? htmlspecialchars($_POST['autonomia_objetivo']) : '' ?>">
+
+                        <p class="ticket-usuario">Solicitante: <strong><?= htmlspecialchars($_SESSION['nombre_usuario']) ?></strong></p>
+
+                        <input type="submit" value="Enviar solicitud">
+                    </form>
+                </section>
+
+            <?php else: ?>
+                <p class="ticket-aviso">Inicia sesión para solicitar el reemplazo de tu batería.</p>
+            <?php endif; ?>
+
         </article>
         <article id="SAIs">
             <h3 id="titservicio">Sistemas de alimentación ininterrumpida</h3>
