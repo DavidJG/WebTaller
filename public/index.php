@@ -56,8 +56,9 @@ $conn->close();
             <label id="close" for="toggle">↪</label>
                 <ul class="nav-menu">
                     <li><a href="#titseccion1">Destacados</a></li>
+                    <li><a href="#CochePreparado">Preparados</a></li>
+                    <li><a href="#ReemplazoCeldas">Nuevas Celdas</a></li>
                     <li><a href="#SAIs">SAI's</a></li>
-                    <li>END</li>
                 </ul>
         </nav>
     </section>
