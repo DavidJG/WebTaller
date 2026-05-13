@@ -345,7 +345,7 @@ section#catalogo {
     padding: 2rem;
     background-color: var(--pallet-7-2);
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+
 
     /* QUITAR SCROLLBAR */
     scrollbar-width: none;
@@ -360,6 +360,7 @@ section#catalogo article {
     border-radius: 1rem;
     padding: 1rem;
     scroll-snap-align: start;
+    scroll-snap-type: x mandatory;
     min-width: 450px;
     max-width: 480px;
 }
