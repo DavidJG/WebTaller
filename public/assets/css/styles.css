@@ -539,6 +539,7 @@ p.error {
 
 section#registro{
     max-width: 400px;
+    min-width: 350px;
     margin: 2rem auto;
     padding: 2rem;
     background-color: var(--pallet-7-1);
