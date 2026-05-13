@@ -537,7 +537,7 @@ p.error {
 
 /* ======= USUARIOS ======= */ 
 
-section#registro, section#login {
+section#registro, section#login, section#usuario-logeado{
     max-width: 40vw;
     min-width: 750px;
     margin: 2rem auto;
