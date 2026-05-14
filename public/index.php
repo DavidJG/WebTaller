@@ -226,6 +226,7 @@ $conn->close();
                 <input type="password" id="contraseñaconf" name="contraseñaconf" required>
                 <label for="tlf">Número de teléfono:</label>
                 <input type="text" id="tlf" name="tlf">
+                <br>
                 <input type="submit" value="Registrarse">
             </section>
         </form>
@@ -239,6 +240,7 @@ $conn->close();
                 <input type="text" id="login_nombre_usuario" name="login_nombre_usuario" required>
                 <label for="login_contraseña">Contraseña:</label>
                 <input type="password" id="login_contraseña" name="login_contraseña" required>
+                <br>
                 <input type="submit" value="Entrar">
             </section>
         </form>
