@@ -594,6 +594,10 @@ section#calculadora input[type="submit"] {
     cursor: pointer;
 }
 
+p.ticket-aviso {
+    text-align: center;
+}
+
 @media screen and (max-width:768px) {
 
     header{
