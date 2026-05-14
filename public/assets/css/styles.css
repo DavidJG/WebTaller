@@ -354,14 +354,15 @@ section#catalogo::-webkit-scrollbar {
     display: none;
 }
 section#catalogo article {
+    flex: 0 0 auto;
     background-color: var(--pallet-7-1);
     border: 3px solid var(--pallet-6);
     border-radius: 1rem;
     padding: 1rem;
     scroll-snap-align: start;
-    scroll-snap-type: x mandatory;
-    min-width: 450px;
-    max-width: 480px;
+    min-width: 300px;
+    max-width: 380px;
+    width: 25vw;
 }
 section#catalogo article:hover {
     box-shadow: 0px 1px 5px 2px var(--sombra);
