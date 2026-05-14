@@ -539,7 +539,7 @@ p.error {
 
 section#registro, section#login, section#usuario-logeado{
     max-width: 40vw;
-    min-width: 750px;
+    min-width: 50px;
     margin: 2rem auto;
     padding: 2rem;
     background-color: var(--pallet-7-1);
