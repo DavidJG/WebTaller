@@ -203,15 +203,15 @@ $conn->close();
 -->
 
     <footer>
-        <section id="usuario-logeado">
+        
             <?php if (isset($_SESSION['id_usuario'])): ?>
+                <section id="usuario-logeado">
                 <!-- Usuario logueado -->
-                
                     <p>Bienvenido, <?= htmlspecialchars($_SESSION['nombre_usuario']) ?>!</p>
                     <a href="logout.php">Cerrar sesión</a>
-                
+                </section>
             <?php else: ?>
-        </section>
+        
             <!-- Formulario de registro -->
             
         <form action="guardar.php" method="post">
