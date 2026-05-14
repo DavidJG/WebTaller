@@ -546,6 +546,11 @@ section#registro, section#login, section#usuario-logeado{
     border-radius: 1rem;
     text-align: center;
 }
+section#login, section#usuario-logeado{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 section#usuario-logeado p{
     font-size: 18px;
     font-weight: 700;
