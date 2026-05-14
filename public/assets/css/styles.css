@@ -478,18 +478,6 @@ p.ticket-aviso {
     font-style: italic;
 }
 
-
-/* ======= USUARIOS ======= */       /* ======= USUARIOS ======= */
-
-section#registro, section#login, section#usuario-logeado{
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: var(--pallet-7-1);
-    border: 2px solid var(--pallet-6);
-    border-radius: 1rem;
-}
-
 /* ======= CALCULADORA SAI ======= */       /* ======= CALCULADORA SAI ======= */
 
 section#calculadora {
@@ -545,6 +533,25 @@ p.precio-total {
 p.error {
     color: red;
     margin-top: 1rem;
+}
+
+/* ======= USUARIOS ======= */       /* ======= USUARIOS ======= */
+
+section#registro, section#login, section#usuario-logeado{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--pallet-7-1);
+    border: 2px solid var(--pallet-6);
+    border-radius: 1rem;
+}
+section#usuario-logeado p{
+    color: var(--money-1);
+    font-size: 18px;
+}
+section#usuario-logeado a{
+    color: var(--est-vendido);
+    font-size: 18px;
 }
 
 @media screen and (max-width:768px) {
