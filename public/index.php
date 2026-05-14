@@ -228,6 +228,7 @@ $conn->close();
                 <input type="text" id="tlf" name="tlf">
                 <br>
                 <input type="submit" value="Registrarse">
+                <input type="reset"  value="Borrar">
             </section>
         </form>
 
