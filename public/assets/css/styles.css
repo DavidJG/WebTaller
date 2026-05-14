@@ -546,7 +546,7 @@ section#registro, section#login, section#usuario-logeado{
     border-radius: 1rem;
     text-align: center;
 }
-section#login, section#usuario-logeado{
+section#login, section#registro{
     display: flex;
     flex-direction: column;
     gap: 1rem;
