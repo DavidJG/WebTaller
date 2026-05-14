@@ -544,6 +544,7 @@ section#registro, section#login, section#usuario-logeado{
     background-color: var(--pallet-7-1);
     border: 2px solid var(--pallet-6);
     border-radius: 1rem;
+    text-align: center;
 }
 section#usuario-logeado p{
     font-size: 18px;
