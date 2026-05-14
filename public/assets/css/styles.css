@@ -550,8 +550,8 @@ section#usuario-logeado p{
     font-size: 18px;
 }
 section#usuario-logeado a{
-    color: var(--est-vendido);
     font-size: 18px;
+    font-weight: 800;
 }
 
 @media screen and (max-width:768px) {
