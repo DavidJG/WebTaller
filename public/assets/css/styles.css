@@ -563,8 +563,8 @@ section#usuario-logeado a{
 section#registro input:focus, 
 section#login input:focus {
     outline: none;
-    border-color: var(--primary-action);
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px var(--pallet-3);
 }
 
 @media screen and (max-width:768px) {
