@@ -203,6 +203,7 @@ $conn->close();
 -->
 
     <footer>
+        <h3 id="titservicio">Zona de Clientes</h3>
         
             <?php if (isset($_SESSION['id_usuario'])): ?>
                 <section id="usuario-logeado">
