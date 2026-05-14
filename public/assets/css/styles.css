@@ -566,6 +566,7 @@ section#login input{
     border-color: var(--pallet-6);
     border-radius: 0.2rem;
     text-align: center;
+    min-height: 25px;
 }
 section#registro input:focus, 
 section#login input:focus {
