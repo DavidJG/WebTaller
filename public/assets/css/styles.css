@@ -338,14 +338,13 @@ section#destacados button:hover{
 /* ======= CATÁLOGO ======= */
 section#catalogo {
     display: grid;
-    grid-template-rows: repeat(1, auto);
+    grid-template-rows: 1fr;  /* Una sola fila */
     grid-auto-flow: column;
     grid-auto-columns: 20vw;
     gap: 0.5rem;
     padding: 2rem;
     background-color: var(--pallet-7-2);
     overflow-x: auto;
-
 
     /* QUITAR SCROLLBAR */
     scrollbar-width: none;
@@ -580,6 +579,18 @@ section#login label{
     font-size: 13px;
     text-transform: uppercase;
     padding-top: 0.5rem;
+}
+
+section#calculadora input[type="submit"] {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--pallet-2);
+    color: var(--pallet-7);
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 @media screen and (max-width:768px) {
