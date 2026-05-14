@@ -560,11 +560,17 @@ section#usuario-logeado a{
     font-size: 18px;
     font-weight: 800;
 }
+section#registro input, 
+section#login input{
+    outline: none;
+    border-color: var(--pallet-6);
+    border-radius: 0.2rem;
+}
 section#registro input:focus, 
 section#login input:focus {
     outline: none;
-    border-color: #4a90e2;
-    border-radius: 0.5rem;
+    border-color: var(--pallet-4);
+    border-radius: 0.2rem;
 }
 
 @media screen and (max-width:768px) {
