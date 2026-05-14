@@ -565,6 +565,8 @@ section#login input{
     outline: none;
     border-color: var(--pallet-6);
     border-radius: 0.2rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 section#registro input:focus, 
 section#login input:focus {
