@@ -546,10 +546,11 @@ section#registro, section#login, section#usuario-logeado{
     border-radius: 1rem;
 }
 section#usuario-logeado p{
-    color: var(--money-1);
     font-size: 18px;
+    font-weight: 700;
 }
 section#usuario-logeado a{
+    color: var(--est-vendido);
     font-size: 18px;
     font-weight: 800;
 }
