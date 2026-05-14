@@ -565,7 +565,7 @@ section#login input{
     outline: none;
     border-color: var(--pallet-6);
     border-radius: 0.2rem;
-    padding-top: 0.4rem;
+    text-align: center;
 }
 section#registro input:focus, 
 section#login input:focus {
@@ -578,6 +578,7 @@ section#login label{
     font-weight: 700;
     font-size: 13px;
     text-transform: uppercase;
+    padding-top: 0.5rem;
 }
 
 @media screen and (max-width:768px) {
