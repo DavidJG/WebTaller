@@ -478,6 +478,18 @@ p.ticket-aviso {
     font-style: italic;
 }
 
+
+/* ======= USUARIOS ======= */       /* ======= USUARIOS ======= */
+
+section#registro, section#login, section#usuario-logeado{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--pallet-7-1);
+    border: 2px solid var(--pallet-6);
+    border-radius: 1rem;
+}
+
 /* ======= CALCULADORA SAI ======= */       /* ======= CALCULADORA SAI ======= */
 
 section#calculadora {
@@ -534,19 +546,6 @@ p.error {
     color: red;
     margin-top: 1rem;
 }
-
-/* ======= USUARIOS ======= */ 
-
-section#registro, section#login, section#usuario-logeado{
-    max-width: 40vw;
-    min-width: 50px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: var(--pallet-7-1);
-    border: 2px solid var(--pallet-6);
-    border-radius: 1rem;
-}
-
 
 @media screen and (max-width:768px) {
 
