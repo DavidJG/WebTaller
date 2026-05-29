@@ -4,7 +4,7 @@ require_once 'conexion.php';
 require_once 'ticket.php';
 require_once 'sai.php';
 
-// JOIN para Coches preparados
+// JOIN para Coches DESTACADOS
 $stmt = $conn->prepare("
     SELECT c.id, c.marca, c.modelo, c.autonomia_km, c.descripcion, c.precio_venta
     FROM destacados d
