@@ -13,7 +13,7 @@ $user = "webuser";
 $pass = "Alexito23@";
 $db   = "garajedb";
 
-// Conexión
+// Conexión y vars
 $conn = new mysqli($host, $user, $pass, $db);
 
 // Verificar conexión
@@ -30,7 +30,7 @@ if (empty($nombre_usuario) || empty($contraseña)) {
     die("Error: rellena todos los campos.");
 }
 
-// Usuario en la base de datos
+// Usuario en la base de datos WHERE
 $stmt = $conn->prepare("SELECT id, nombre_usuario, contraseña FROM usuarios WHERE nombre_usuario = ?");
 $stmt->bind_param("s", $nombre_usuario);
 $stmt->execute();
